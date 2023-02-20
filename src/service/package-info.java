@@ -1,2 +1,2 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://service/")
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://services/")
 package service;

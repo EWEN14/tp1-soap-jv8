@@ -12,14 +12,14 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>Classe Java pour getComptesResponse complex type.
  * 
- * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * <p>Le fragment de schï¿½ma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="getComptesResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://service/}compteDataScience" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://services/}compteDataScience" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>Classe Java pour compteDataScience complex type.
  * 
- * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * <p>Le fragment de schï¿½ma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="compteDataScience">
@@ -40,7 +40,7 @@ public class CompteDataScience {
     protected String prenom;
 
     /**
-     * Obtient la valeur de la propriété id.
+     * Obtient la valeur de la propriï¿½tï¿½ id.
      * 
      */
     public int getId() {
@@ -48,7 +48,7 @@ public class CompteDataScience {
     }
 
     /**
-     * Définit la valeur de la propriété id.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ id.
      * 
      */
     public void setId(int value) {
@@ -56,7 +56,7 @@ public class CompteDataScience {
     }
 
     /**
-     * Obtient la valeur de la propriété nom.
+     * Obtient la valeur de la propriï¿½tï¿½ nom.
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class CompteDataScience {
     }
 
     /**
-     * Définit la valeur de la propriété nom.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ nom.
      * 
      * @param value
      *     allowed object is
@@ -80,7 +80,7 @@ public class CompteDataScience {
     }
 
     /**
-     * Obtient la valeur de la propriété prenom.
+     * Obtient la valeur de la propriï¿½tï¿½ prenom.
      * 
      * @return
      *     possible object is
@@ -92,7 +92,7 @@ public class CompteDataScience {
     }
 
     /**
-     * Définit la valeur de la propriété prenom.
+     * Dï¿½finit la valeur de la propriï¿½tï¿½ prenom.
      * 
      * @param value
      *     allowed object is

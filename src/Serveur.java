@@ -1,4 +1,4 @@
-import service.MLService;
+import services.MLService;
 
 import javax.xml.ws.Endpoint;
 

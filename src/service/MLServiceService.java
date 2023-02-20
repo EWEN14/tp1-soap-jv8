@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "MLServiceService", targetNamespace = "http://service/", wsdlLocation = "http://localhost:8585/?wsdl")
+@WebServiceClient(name = "MLServiceService", targetNamespace = "http://services/", wsdlLocation = "http://localhost:8585/?wsdl")
 public class MLServiceService
     extends Service
 {
 
     private final static URL MLSERVICESERVICE_WSDL_LOCATION;
     private final static WebServiceException MLSERVICESERVICE_EXCEPTION;
-    private final static QName MLSERVICESERVICE_QNAME = new QName("http://service/", "MLServiceService");
+    private final static QName MLSERVICESERVICE_QNAME = new QName("http://services/", "MLServiceService");
 
     static {
         URL url = null;
@@ -65,11 +65,11 @@ public class MLServiceService
     /**
      * 
      * @return
-     *     returns MLService
+     *     returns MLWS
      */
-    @WebEndpoint(name = "MLServicePort")
-    public MLService getMLServicePort() {
-        return super.getPort(new QName("http://service/", "MLServicePort"), MLService.class);
+    @WebEndpoint(name = "MLWSPort")
+    public MLWS getMLWSPort() {
+        return super.getPort(new QName("http://services/", "MLWSPort"), MLWS.class);
     }
 
     /**
@@ -77,11 +77,11 @@ public class MLServiceService
      * @param features
      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
      * @return
-     *     returns MLService
+     *     returns MLWS
      */
-    @WebEndpoint(name = "MLServicePort")
-    public MLService getMLServicePort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://service/", "MLServicePort"), MLService.class, features);
+    @WebEndpoint(name = "MLWSPort")
+    public MLWS getMLWSPort(WebServiceFeature... features) {
+        return super.getPort(new QName("http://services/", "MLWSPort"), MLWS.class, features);
     }
 
     private static URL __getWsdlLocation() {
