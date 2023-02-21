@@ -1,35 +1,12 @@
 package services;
 
-import entity.CompteDataScience;
 import entity.DBSCAN;
 import entity.Point;
 
-import javax.jws.WebMethod;
-import javax.jws.WebService;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
-import java.util.Random;
 
-@WebService(name = "MLWS")
-public class MLService {
-
-  @WebMethod(operationName = "getComptes")
-  public List<CompteDataScience> getComptes() {
-    List<CompteDataScience> cptes = new ArrayList<>();
-    cptes.add(new CompteDataScience(1, "Nils", "boby"));
-    cptes.add(new CompteDataScience(2, "Doe", "John"));
-    return cptes;
-  }
-
-  @WebMethod(operationName = "getMoy")
-  public double getMoy(double[] list) {
-    double sum = 0;
-    for (double number : list) {
-      sum += number;
-    }
-    return sum / list.length;
-  }
+public class MLServiceStatic {
 
   /**
    *
@@ -37,8 +14,7 @@ public class MLService {
    * @param k nombre de clusters
    * @return
    */
-  @WebMethod(operationName = "getDataKMeans")
-  public int[] kmeans(double[][] data, int k) {
+  public static int[] getDataKMeansStatic(double[][] data, int k) {
     // Initialiser aléatoirement les centroids
     Random rand = new Random();
     List<double[]> centroids = new ArrayList<>();
@@ -56,7 +32,7 @@ public class MLService {
         double minDist = Double.MAX_VALUE;
         int minIndex = -1;
         for (int j = 0; j < centroids.size(); j++) {
-          double dist = distance(point, centroids.get(j));
+          double dist = distanceEuclidienne(point, centroids.get(j));
           if (dist < minDist) {
             minDist = dist;
             minIndex = j;
@@ -86,11 +62,18 @@ public class MLService {
       }
     }
 
+    // Print the results
+    for (int i = 0; i < clusters.length; i++) {
+      System.out.println(Arrays.toString(data[i]) + " belongs to cluster " + clusters[i]);
+    }
+
+    System.out.println(Arrays.toString(clusters));
+
     return clusters;
   }
 
   // méthode de calcul de la distance euclidienne
-  public static double distance(double[] a, double[] b) {
+  public static double distanceEuclidienne(double[] a, double[] b) {
     double somme = 0;
     for (int i = 0; i < a.length; i++) {
       somme += Math.pow(a[i] - b[i], 2);
@@ -98,10 +81,9 @@ public class MLService {
     return Math.sqrt(somme);
   }
 
-  @WebMethod(operationName = "getDBScan")
-  public int[] DBScan(double[][] list, double eps, int minPts) {
+  public static int[] getDataDBScanStatic(double[][] data, double eps, int minPts) {
     ArrayList<Point> points = new ArrayList<>();
-    for (double[] point: list) {
+    for (double[] point: data) {
       points.add(new Point(point[0], point[1]));
     }
 
