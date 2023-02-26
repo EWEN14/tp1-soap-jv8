@@ -104,7 +104,7 @@ public class MLService {
     for (double[] point: list) {
       points.add(new Point(point[0], point[1]));
     }
-
+  
     DBSCAN dbscan = new DBSCAN(points, eps, minPts);
 
     // Effectuer DBSCAN et obtenir le tableau d'étiquettes de cluster
